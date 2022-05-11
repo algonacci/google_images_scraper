@@ -3,4 +3,4 @@ argparse
 requests
 cv2
 os
-numpy as np
+numpy
