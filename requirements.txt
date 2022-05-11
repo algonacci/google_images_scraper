@@ -2,5 +2,4 @@ imutils
 argparse
 requests
 opencv-python
-os
 numpy
