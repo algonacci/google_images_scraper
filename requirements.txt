@@ -1,6 +1,6 @@
 imutils
 argparse
 requests
-cv2
+opencv-python
 os
 numpy
