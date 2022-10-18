@@ -41,3 +41,8 @@ $ pip install -r requirements.txt
 - Copy that `urls.txt` into the project directory
 - Open terminal and run `python image-downloader2.py -u urls.txt -o dataset`
 - Hit enter and wait till all images are scraped
+
+## License
+[MIT LICENSE](./LICENSE)
+
+© Developed by [algonacci](https://github.com/algonacci)
