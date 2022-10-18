@@ -21,19 +21,23 @@
   /></a>
 </p>
 
-# Description
+## Description
 A simple tools to scrape data from Google Images for computer vision task
 
-# How to run Google image scraping
+## Installation
+```bash
+# Python version 3.7.9 or newer
+$ git clone https://github.com/algonacci/google_images_scraper.git
+$ pip install -r requirements.txt
+```
 
-- clone this repo
-- `pip install numpy, imutils, opencv-python, argparse, requests`
-- copy all the js_code.js
-- open and search the google images, scroll down as much as you want
-- press F12
-- paste in the console log, press enter
-- it will download urls.txt which contains all image url
-- move the urls.txt to the project directory
-- open terminal and run this command
-- `python image-downloader2.py -u urls.txt -o dataset`
-- press enter and wait till 10 minutes
+## Usage
+- Make a folder named `dataset` in the project directory
+- Copy all inside the `js_code.js`
+- Search for a keyword in Google Images, and scroll down as much as you want
+- Press `F12` in your keyboard
+- Paste in the console log, then hit enter
+- It will download `urls.txt` which contains all the scraped image's urls
+- Copy that `urls.txt` into the project directory
+- Open terminal and run `python image-downloader2.py -u urls.txt -o dataset`
+- Hit enter and wait till all images are scraped
