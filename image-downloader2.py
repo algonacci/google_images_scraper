@@ -5,20 +5,6 @@ import cv2
 import os
 import numpy as np
 
-# Adapted from https://www.pyimagesearch.com/2017/12/04/how-to-create-a-deep-learning-dataset-using-google-images/
-# fixes the following issues with the original:
-# 1 - files are always saved as .jpg even if they are not in JPEG format
-#     This version uses open CV to write the image files so they are really always JPG
-# 2 - failed files leave gaps in numbering
-# 3 - numbering always starts from zero
-
-# how to use 'python image-downloader2.py -u urls.txt -o my-bottle-dataset'
-
-# link edit: 
-# 1. https://gist.github.com/davesnowdon/2016d4e9f069ff1788ede4f2902bd198#file-image-downloader2-py
-# 2. https://github.com/tomahim/py-image-dataset-generator
-
-
 # construct the argument parse and parse the arguments
 ap = argparse.ArgumentParser()
 ap.add_argument("-u", "--urls", required=True,
@@ -73,7 +59,8 @@ def return_images(file_contents, is_verbose=False):
 def write_images(images, output_dir, start=0, is_verbose=False):
     file_num = start
     for url, image in images:
-        p = os.path.sep.join([output_dir, "{}.jpg".format(str(file_num).zfill(8))])
+        p = os.path.sep.join(
+            [output_dir, "{}.jpg".format(str(file_num).zfill(8))])
         cv2.imwrite(p, image)
         file_num += 1
         if is_verbose:
